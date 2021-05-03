@@ -1,5 +1,7 @@
 package day4Hw2.Entites;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import day4Hw2.Abstract.Entity;
@@ -8,18 +10,18 @@ public class Customer implements Entity{
 	private int id;
 	private String firstName;
 	private String lastName;
-	private Date dateOfBirth;
+	private LocalDate dateOfBirth;
 	private String nationalityId;
 
 //private String firstName;
 	public  Customer() {
 	}
 
-	public Customer(int id, String firstName, String lastName, Date dateOfBirth, String nationalityId) {
+	public Customer(int id, String firstName, String lastName, LocalDate date, String nationalityId) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.dateOfBirth = dateOfBirth;
+		this.dateOfBirth = date;
 		this.nationalityId = nationalityId;
 	}
 
@@ -47,13 +49,6 @@ public class Customer implements Entity{
 		this.lastName = lastName;
 	}
 
-	public Date getDateOfBrith() {
-		return dateOfBirth;
-	}
-
-	public void setDateOfBrith(Date dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
 
 	public String getNationalityId() {
 		return nationalityId;
@@ -61,6 +56,14 @@ public class Customer implements Entity{
 
 	public void setNationalityId(String nationalityId) {
 		this.nationalityId = nationalityId;
+	}
+
+	public LocalDate getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(LocalDate dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
 	}
 
 }

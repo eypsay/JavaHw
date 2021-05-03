@@ -17,7 +17,9 @@ public class StarbucksCustomerManager extends BaseCustomerManager {
 		if (customerCheckService.checkIfRealPerson(customer))
 
 		{
+			System.out.println("Person is Valid!!!");
 			super.save(customer);
+			
 		} else {
 			System.out.println("Not a valid Person!");
 		}
