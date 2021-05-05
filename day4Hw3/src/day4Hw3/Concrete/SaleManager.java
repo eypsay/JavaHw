@@ -48,7 +48,8 @@ public class SaleManager implements SaleService {
 
 		if (campaign.getIsValid()) {
 			newPrice = (game.getPrice() - (game.getPrice() * campaign.getDiscountValue() / 100));
-			System.out.println(game.getName() + " bougth " + newPrice + " TL by " + player.getFirstName());
+			System.out.println(game.getName() + " bougth " + newPrice + " TL with **" + campaign.getDescription()
+					+ "** camping by " + player.getFirstName());
 		} else {
 			System.out.println(game.getName() + " bougth " + game.getPrice() + " TL by " + player.getFirstName());
 		}

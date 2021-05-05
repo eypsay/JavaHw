@@ -2,7 +2,7 @@ package day4Hw3.Abstract;
 
 import day4Hw3.Entites.Game;
 
-public interface GameService extends BaseService{
+public interface GameService {
 	public void add(Game game);
 
 	public void update(Game game);

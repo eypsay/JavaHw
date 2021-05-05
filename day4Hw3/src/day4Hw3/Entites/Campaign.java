@@ -12,12 +12,12 @@ public class Campaign implements Entity {
 	public Campaign() {
 	}
 
-	public Campaign(int id, String name, String description, int discountValue,boolean isValid) {
+	public Campaign(int id, String name, String description, int discountValue, boolean isValid) {
 		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.discountValue = discountValue;
-		this.isValid=isValid;
+		this.isValid = isValid;
 	}
 
 	public int getId() {

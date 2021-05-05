@@ -5,7 +5,7 @@ import day4Hw3.Entites.Game;
 import day4Hw3.Entites.Player;
 import day4Hw3.Entites.Sale;
 
-public interface SaleService extends BaseService {
+public interface SaleService {
 	public void add(Sale sale);
 
 	public void update(Sale sale);

@@ -46,6 +46,4 @@ public class GameManager implements GameService {
 
 	}
 
-	
-
 }

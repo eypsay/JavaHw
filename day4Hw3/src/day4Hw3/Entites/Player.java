@@ -11,16 +11,18 @@ public class Player implements Entity {
 	private String lastName;
 	private String email;
 	private LocalDate birthDate;
+	private String nationalityId;
 
 	public Player() {
 	}
 
-	public Player(int id, String firstName, String lastName, String email, LocalDate birthDate) {
+	public Player(int id, String firstName, String lastName, String email, LocalDate birthDate, String nationalityId) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.birthDate = birthDate;
+		this.nationalityId = nationalityId;
 	}
 
 	public int getId() {
@@ -61,6 +63,14 @@ public class Player implements Entity {
 
 	public void setBirthDate(LocalDate birthDate) {
 		this.birthDate = birthDate;
+	}
+
+	public String getNationalityId() {
+		return nationalityId;
+	}
+
+	public void setNationalityId(String nationalityId) {
+		this.nationalityId = nationalityId;
 	}
 
 }

@@ -1,13 +1,32 @@
 package day4Hw3.Concrete;
 
+import day4Hw3.Abstract.PlayerCheckService;
 import day4Hw3.Abstract.PlayerService;
 import day4Hw3.Entites.Player;
 
 public class PlayerManager implements PlayerService {
 
+	private PlayerCheckService customerCheckService;
+
+	public PlayerManager() {
+	}
+
+	public PlayerManager(PlayerCheckService customerCheckService) {
+		this.customerCheckService = customerCheckService;
+	}
+
 	@Override
 	public void add(Player player) {
-		System.out.println(player.getFirstName() + " added in the system.");
+
+		if (customerCheckService.checkIfRealPerson(player))
+
+		{
+			System.out.println("Person is Valid!!!");
+			System.out.println(player.getFirstName() + " added in the system.");
+
+		} else {
+			System.out.println("Not a valid Person!!! Try again a valid info");
+		}
 
 	}
 
